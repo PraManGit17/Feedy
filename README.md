@@ -27,6 +27,18 @@ Live Demo Link :
 8. Clear project setup instructions
 9. Live demo hosting (optional but recommended)
 
+
+### Tech Stack
+
+- Node.js + Express.js
+- MongoDB + Mongoose
+- EJS templating
+- TailwindCSS for UI
+- GSAP for animation
+- dotenv for configuration
+- Nodemon for development
+
+
 ## Setup Instructions
 
 -- Follow the steps below to run Feedy on your local machine:
@@ -54,14 +66,3 @@ PORT=5000
 npm run dev
 
 5. Server will start at: http://localhost:5000
-
-
-### Tech Stack
-
-- Node.js + Express.js
-- MongoDB + Mongoose
-- EJS templating
-- TailwindCSS for UI
-- GSAP for animation
-- dotenv for configuration
-- Nodemon for development
