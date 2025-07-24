@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Feedy Feedback</title>
+</head>
+
+<body>
+  <div class="w-full h-screen flex flex-col items-center justify-start py-10">
+
+    <button id='feedy' class="text-4xl text-blue-500 font-bold hover:cursor-pointer">Feedy Feedback</button>
+
+    <div class="py-10 flex flex-col items-center w-[60%] px-20">
+      <% if (feedbacks && feedbacks.length> 0) { %>
+        <% feedbacks.forEach(function(feedback) { %>
+          <div
+            class="w-full flex items-center justify-start gap-4 px-3 py-3 rounded-2xl shadow-sm shadow-gray-900 mb-4">
+            <div class="h-full w-2 bg-blue-500 rounded-tl-2xl rounded-bl-2xl"></div>
+            <div class="w-full flex flex-col justify-start gap-2">
+              <div class="text-3xl font-medium">
+                <%= feedback.name %>
+              </div>
+              <div class="flex items-center justify-between w-full">
+                <div class="text-sm font-normal w-[80%] leading-relaxed">
+                  <%= feedback.message %>
+                </div>
+                <div class="text-md font-normal px-2">
+                  (<%= feedback.createdAt.toDateString() %>)
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+            <% } else { %>
+              <p class="text-xl text-gray-600 mt-10">No feedbacks are present.</p>
+              <% } %>
+    </div>
+  </div>
+</body>
+
+<script src="/feedback.js"></script>
+</html>
