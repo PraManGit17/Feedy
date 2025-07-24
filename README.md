@@ -4,7 +4,7 @@ Feedy is a simple, full-stack web application built with **Node.js**, **Express*
 
 ## Live Demo
 
-Live Demo Link :
+Live Demo Link : https://feedy.onrender.com
 
 ## Features
 
